@@ -5,8 +5,7 @@ class Component {
 } 
 
 class Entity {
-	constructor(id) {
-		this.id = id;
+	constructor() {
 		this.components = [];
 	}
 
