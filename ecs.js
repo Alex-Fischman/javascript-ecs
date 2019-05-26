@@ -15,7 +15,9 @@ class Entity {
 			component.prototype.constructor.name;
 	}
 	
-	get(component) { return this.components.find(c => this.type(c) === this.type(component)); }
+	get(component) {
+		return this.components.find(c => this.type(c) === this.type(component));
+	}
 
 	set(component) {
 		const included = this.get(component);
