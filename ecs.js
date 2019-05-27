@@ -14,7 +14,9 @@ class Entity {
 	}
 	
 	get(component) {
-		return this.components.find(c => c.type === component.prototype.constructor.name);
+		return this.components.find(
+			c => c.type === component.prototype.constructor.name
+		);
 	}
 
 	set(component) {
