@@ -20,7 +20,7 @@ class Entity {
 	}
 
 	set(component) {
-		this.components.push(component)
+		this.components.push(component);
 	}
 }
 
