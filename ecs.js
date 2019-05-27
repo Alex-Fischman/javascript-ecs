@@ -1,4 +1,8 @@
 class Component {
+	get type() {
+		return this.constructor.name;
+	}
+
 	constructor(data) {
 		this.data = data;
 	}
@@ -8,15 +12,9 @@ class Entity {
 	constructor() {
 		this.components = [];
 	}
-
-	type(component) {
-		return component.prototype === undefined?
-			component.constructor.name:
-			component.prototype.constructor.name;
-	}
 	
 	get(component) {
-		return this.components.find(c => this.type(c) === this.type(component));
+		return this.components.find(c => c.type === component.prototype.constructor.name);
 	}
 
 	set(component) {
