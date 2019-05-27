@@ -20,9 +20,7 @@ class Entity {
 	}
 
 	set(component) {
-		const included = this.get(component);
-		if (included === undefined) this.components.push(component);
-		else this.components[this.components.indexOf(included)] = component;
+		this.components.push(component)
 	}
 }
 
